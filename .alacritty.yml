@@ -1,5 +1,5 @@
 shell:
-  program: /usr/bin/bash
+  program: /usr/bin/zsh
   args:
     - -c
     - "tmux attach || tmux"
