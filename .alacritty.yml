@@ -1,0 +1,59 @@
+shell:
+  program: /usr/bin/bash
+  args:
+    - -c
+    - "tmux attach || tmux"
+
+env:
+  TERM: xterm-256color
+
+window:
+  title: "Terminal"
+  dimensions:
+    columns: 120
+    lines: 32
+  padding:
+    y: 6
+
+cursor:
+  style: Underline
+
+font:
+  size: 14.0
+  normal:
+    family: UbuntuMono Nerd Font Mono
+    style: Regular
+  bold:
+    family: UbuntuMono Nerd Font Mono
+    style: Bold
+  italic:
+    family: Droid Sans Mono Slashed for Powerline
+
+colors:
+  primary:
+    background: "#14161b"
+    foreground: "#abb2bf"
+
+  normal:
+    black: "#282c34"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#d19a66"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#abb2bf"
+
+  bright:
+    black: "#5c6370"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#d19a66"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#ffffff"
+
+key_bindings:
+  - { key: Q, mods: Control, action: Quit }
+  - { key: F, mods: Control, action: ToggleFullscreen }
