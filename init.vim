@@ -20,10 +20,20 @@ Plug 'junegunn/vim-emoji'
 call plug#end()
 
 " Enable True Colors
-set termguicolors
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+if (has('termguicolors'))
+  set termguicolors
+endif
 
 " Set Color Theme to One Dark
-colo onedark
+syntax on
+colorscheme onedark
+
+" Enable copy between nvim in diferente tmux panel
+:set clipboard=unnamed
 
 " Statusbar Config
 if !has('gui_running')
