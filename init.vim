@@ -10,7 +10,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'myusuf3/numbers.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
@@ -35,7 +35,7 @@ syntax on
 colorscheme onedark
 
 " Enable copy between nvim in diferente tmux panel
-:set clipboard=unnamed
+" :set clipboard=unnamed
 
 " Statusbar Config
 if !has('gui_running')
@@ -219,4 +219,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-git', 'coc-yaml']

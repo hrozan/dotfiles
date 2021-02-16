@@ -1,0 +1,6 @@
+""" Plugins
+set commentary
+set surround
+""" Config
+set number relativenumber
+set nu rnu
