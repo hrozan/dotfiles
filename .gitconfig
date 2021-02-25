@@ -3,6 +3,7 @@
 	name = hrozan
 [core]
 	editor = nvim
-        autocrlf = input
+	pager = delta
+    autocrlf = input
 [init]
-        defaultBranch = main
+    defaultBranch = main
