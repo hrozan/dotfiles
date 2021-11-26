@@ -1,3 +1,8 @@
+" Neovim Configuration File
+" Author: Higor Rozan
+
+" Disable compatibility to old-time vi
+set nocompatible     
 
 " Start Plug
 call plug#begin('~/.vim/plugged')
@@ -5,6 +10,8 @@ call plug#begin('~/.vim/plugged')
 " Nerdtree and Icons
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Git gutter
 Plug 'airblade/vim-gitgutter'
@@ -42,10 +49,7 @@ colorscheme onedark
 set number relativenumber
 
 " Speed up scrolling in Vim
-set ttyfast
-
-" Disable compatibility to old-time vi
-set nocompatible            
+set ttyfast       
 
 " Width for autoindents
 set shiftwidth=4            
