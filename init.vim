@@ -37,6 +37,15 @@ Plug 'joshdick/onedark.vim'
 " Coc Autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Emmet
+Plug 'mattn/emmet-vim'
+
+" EditorCofig
+Plug 'mattn/emmet-vim'
+
+" AutoPairs
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 " ---------------------
