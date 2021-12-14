@@ -13,4 +13,4 @@ nmap <space>rn :action RenameElement<CR>
 nmap <space>e :NERDTreeFocus<CR>
 nmap <A-e> :action RecentFiles<CR>
 nmap rr :action Run<CR>
-nmap <space>x :action CloseActiveTab<CR>
+nmap <space>x :action CloseEditor<CR>
