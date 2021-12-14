@@ -1,6 +1,15 @@
-""" Plugins
+" Plugins
 set commentary
 set surround
-""" Config
+set NERDTree
+
+" Config
 set number relativenumber
 set nu rnu
+
+" Mappings
+nmap gi :action GotoImplementation<CR>
+nmap <space>rn :action RenameElement<CR>
+nmap <space>e :NERDTreeFocus<CR>
+nmap <A-e> :action RecentFiles<CR>
+nmap rr :action Run<CR>
