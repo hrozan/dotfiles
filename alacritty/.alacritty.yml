@@ -14,46 +14,52 @@ window:
     lines: 32
   padding:
     y: 6
+    x: 6
+
+# background_opacity: 0.9
 
 cursor:
   style: Underline
-
 font:
-  size: 14.0
+  size: 13.0
   normal:
-    family: UbuntuMono Nerd Font Mono
+    family: CaskaydiaCove Nerd Font Mono
     style: Regular
   bold:
-    family: UbuntuMono Nerd Font Mono
+    family: CaskaydiaCove Nerd Font Mono
     style: Bold
   italic:
     family: Droid Sans Mono Slashed for Powerline
 
 colors:
+  # Default colors
   primary:
-    background: "#14161b"
-    foreground: "#abb2bf"
+    background: '#14161b'
+    foreground: '#abb2bf'
 
+  # Normal colors
   normal:
-    black: "#282c34"
-    red: "#e06c75"
-    green: "#98c379"
-    yellow: "#d19a66"
-    blue: "#61afef"
-    magenta: "#c678dd"
-    cyan: "#56b6c2"
-    white: "#abb2bf"
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
 
+  # Bright colors
   bright:
-    black: "#5c6370"
-    red: "#e06c75"
-    green: "#98c379"
-    yellow: "#d19a66"
-    blue: "#61afef"
-    magenta: "#c678dd"
-    cyan: "#56b6c2"
-    white: "#ffffff"
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#ffffff'
 
-key_bindings:
-  - { key: Q, mods: Control, action: Quit }
-  - { key: F, mods: Alt, action: ToggleFullscreen }
+theme: One-Dark
+
