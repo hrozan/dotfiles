@@ -6,11 +6,20 @@ set NERDTree
 " Config
 set number relativenumber
 set nu rnu
+set clipboard+=unnamed
+set clipboard+=ideaput
+let mapleader=" "
 
 " Mappings
 nmap gi :action GotoImplementation<CR>
-nmap <space>rn :action RenameElement<CR>
-nmap <space>e :NERDTreeFocus<CR>
-nmap <A-e> :action RecentFiles<CR>
-nmap rr :action Run<CR>
-nmap <space>x :action CloseEditor<CR>
+
+nmap <leader>rr :action Run<CR>
+nmap <leader>x :action CloseEditor<CR>
+nmap <leader>e :NERDTreeFocus<CR>
+nmap <leader>xa :action CloseAllEditors<CR>
+nmap <leader>rn :action RenameElement<CR>
+nmap <leader>ff :action GotoFile<CR>
+
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+map <A-e> :action RecentFiles<CR>
