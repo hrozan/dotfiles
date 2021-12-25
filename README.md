@@ -16,12 +16,12 @@ pamac install tmux
 
 #### Nerd Fonts
 
-__Cascadia Code__
+Cascadia Code
 ```bash
 pamac install nerd-fonts-cascadia-code
 ```
 
-__Ubuntu Mono__ 
+Ubuntu Mono 
 ```bash
 pamac install nerd-fonts-ubuntu-mono
 ```
@@ -45,12 +45,12 @@ Install Neovim
 pamac install neovim
 ```
 
-Install Neovim Packer
+Install Packer
 ```bash
 pamac install nvim-packer-git
 ```
 
-Instal Neovim NVChad
+Install NVChad
 ````bash
 git clone https://github.com/NvChad/NvChad ~/.config/nvim
 ``````
