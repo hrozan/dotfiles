@@ -54,3 +54,10 @@ Install NVChad
 ````bash
 git clone https://github.com/NvChad/NvChad ~/.config/nvim
 ``````
+
+### Git
+
+Install git diff tool
+```
+pamac install git-delta-bin
+```
