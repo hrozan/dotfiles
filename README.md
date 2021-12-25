@@ -76,5 +76,3 @@ Install Github CLI
 ```
 pamac install github-cli
 ```
-
-### Tools
