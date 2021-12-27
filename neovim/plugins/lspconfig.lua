@@ -54,6 +54,11 @@ M.setup_lsp = function(attach, capabilities)
    lspconfig.tsserver.setup{
      on_attach = on_attach
    }
+
+   -- Yaml
+   lspconfig.yamlls.setup{
+     on_attach = on_attach
+   }
 end
 
 return M

@@ -53,23 +53,6 @@ Install ZSH Theme Poweline
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-### Neovim
-
-Install Neovim
-```
-pamac install neovim
-```
-
-Install Packer
-```
-pamac install nvim-packer-git
-```
-
-Install NVChad
-````
-git clone https://github.com/NvChad/NvChad ~/.config/nvim
-``````
-
 ### Git
 
 Install git diff tool
@@ -94,6 +77,16 @@ Install `node`
 pamac install nodejs
 ```
 
+Install `nvm`
+```
+pamac install nvm 
+```
+
+Set default node to system
+```
+nvm alias default system
+```
+
 Install `yarn`
 ```
 pamac install yarn 
@@ -116,4 +109,39 @@ Add user to root group
 ```
 sudo gpasswd -a $USER docker
 ```
+
+### Neovim
+
+Install Neovim
+```
+pamac install neovim
+```
+
+Install Packer
+```
+pamac install nvim-packer-git
+```
+
+Install NVChad
+````
+git clone https://github.com/NvChad/NvChad ~/.config/nvim
+``````
+
+#### LSP
+
+Install `gopls`
+```
+go install golang.org/x/tools/gopls@latest
+```
+
+Install `tsserver`
+```
+npm install -g typescript typescript-language-server
+```
+
+Install `yamlls`
+```
+npm install -g yaml-language-server
+```
+
 

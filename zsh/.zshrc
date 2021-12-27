@@ -38,6 +38,9 @@ alias ls='exa'
 alias ll='exa -lh --git'
 alias la='exa -lh --git -a '
 
+# Node NVM
+source /usr/share/nvm/init-nvm.sh
+
 # Go
 export PATH=$PATH:$HOME/go/bin
 
