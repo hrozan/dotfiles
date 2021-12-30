@@ -41,7 +41,7 @@ alias ll='exa -lh --git'
 alias la='exa -lh --git -a '
 # Packages
 alias packages-orphans-list='pacman -Qdt'
-alias packages-orphans-remove='pacman -Rsn $(pacman -Qdtq)'
+alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
 
 # Node NVM
 source /usr/share/nvm/init-nvm.sh
