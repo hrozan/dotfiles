@@ -12,16 +12,17 @@ export ZSH="/home/hrozan/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # Plugins
 plugins=(
-    git
-    git-extras
-    node
-    npm
-    cargo
-    rust
-    docker
-    zsh-syntax-highlighting
+  archlinux
+  golang
+  node
+  npm
+  yarn
+  docker
+  docker-compose
+  zsh-syntax-highlighting
+  github
 )
-# Load
+# Load ZSH
 source $ZSH/oh-my-zsh.sh
 
 # Editor
@@ -34,9 +35,11 @@ alias viconf-chad='nvim ~/.config/nvim/lua/custom/chadrc.lua'
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
+# Change ls to exa
 alias ls='exa'
 alias ll='exa -lh --git'
 alias la='exa -lh --git -a '
+# Packages
 alias packages-orphans-list='pacman -Qdt'
 alias packages-orphans-remove='pacman -Rsn $(pacman -Qdtq)'
 
@@ -45,6 +48,9 @@ source /usr/share/nvm/init-nvm.sh
 
 # Go
 export PATH=$PATH:$HOME/go/bin
+
+# Bat
+export BAT_THEME="TwoDark"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

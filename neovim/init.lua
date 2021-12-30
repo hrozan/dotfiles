@@ -5,6 +5,7 @@ hooks.add("setup_mappings", function(map)
   map("n", "<leader>cc", ":Telescope <CR>", opt)
   map("n", "<leader>q", ":q <CR>", opt)
   map("n", "<A-1>", ":NvimTreeToggle <CR>", opt)
+
   -- Hop
   map('n', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
   map('n', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
@@ -25,5 +26,7 @@ hooks.add("install_plugins", function(use)
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
+
+  use{"https://tpope.io/vim/fugitive.git"}
 end)
 

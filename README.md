@@ -19,6 +19,11 @@ Install `exa`
 pamac install exa
 ```
 
+Install `bat`
+```
+pamac install bat
+```
+
 Install Jetbrains ToolBox
 ```
 pamac install jetbrains-toolbox
@@ -136,12 +141,22 @@ go install golang.org/x/tools/gopls@latest
 
 Install `tsserver`
 ```
-npm install -g typescript typescript-language-server
+sudo npm install -g typescript typescript-language-server
 ```
 
 Install `yamlls`
 ```
-npm install -g yaml-language-server
+sudo npm install -g yaml-language-server
+```
+
+Install `jsonls`
+```
+sudo npm i -g vscode-langservers-extracted
+```
+
+Install `dockerls`
+```
+sudo npm install -g dockerfile-language-server-nodejs
 ```
 
 

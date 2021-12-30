@@ -1,9 +1,36 @@
 [user]
-	email = higorb.rozan@gmail.com 
-	name = hrozan
+  email = higorb.rozan@gmail.com 
+  name = hrozan
+
 [core]
-	editor = nvim
-	pager = delta
-    autocrlf = input
+  editor = nvim
+  pager = delta
+  autocrlf = input
+
 [init]
-    defaultBranch = main
+  defaultBranch = main
+
+[alias]
+  s = status
+  c = commit
+  a = add .
+  mt = mergetool
+  cb = checkout -b 
+  cm = checkout main 
+  l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+  ggpush = push origin $(current_branch)
+  ggpull = pull origin $(current_branch)
+  del = branch -D    
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  save = !git add -A && git commit 
+  undo = reset HEAD~1 --mixed
+  res = !git reset --hard
+
+[merge]
+  tool = nvimdiff
+  conflictstyle = diff3
+
+[mergetool]
+  keepBackup = false
+  keepTemporaries = false
+  prompt = false

@@ -15,7 +15,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -33,6 +33,7 @@ end
 
 M.setup_lsp = function(attach, capabilities)
   local lspconfig = require "lspconfig"
+
   -- Go 
   lspconfig.gopls.setup{
     on_attach = on_attach,
@@ -48,17 +49,30 @@ M.setup_lsp = function(attach, capabilities)
     flags = {
       debounce_text_changes = 150,
     }
-   }
+  }
 
-   --- Typescript
-   lspconfig.tsserver.setup{
-     on_attach = on_attach
-   }
+  --- Typescript
+  lspconfig.tsserver.setup{
+    on_attach = on_attach
+  }
 
-   -- Yaml
-   lspconfig.yamlls.setup{
-     on_attach = on_attach
-   }
+  -- Yaml
+  lspconfig.yamlls.setup{
+    on_attach = on_attach
+  }
+
+  -- JSON
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities.textDocument.completion.completionItem.snippetSupport = true
+  lspconfig.jsonls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+  }
+
+  -- Docker
+  lspconfig.dockerls.setup{
+    on_attach = on_attach
+  }
 end
 
 return M
