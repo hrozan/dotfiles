@@ -159,4 +159,7 @@ Install `dockerls`
 sudo npm install -g dockerfile-language-server-nodejs
 ```
 
-
+Install `emmetls`
+```
+sudo npm install -g emmet-ls 
+```

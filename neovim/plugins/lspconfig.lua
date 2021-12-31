@@ -73,6 +73,11 @@ M.setup_lsp = function(attach, capabilities)
   lspconfig.dockerls.setup{
     on_attach = on_attach
   }
+
+  -- Emmet
+  lspconfig.emmet_ls.setup{
+    filetypes = { "html", "css", "vue" }
+  }
 end
 
 return M
