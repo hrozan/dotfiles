@@ -15,6 +15,12 @@ M.plugins = {
       lspconfig = {
          setup_lspconf = "custom.plugins.lspconfig",
       },
+      nvimtree = {
+         ui = {
+            side = "right",
+            width = 40,
+         },
+      },
    },
 }
 
