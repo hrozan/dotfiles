@@ -45,17 +45,12 @@ pamac install nerd-fonts-ubuntu-mono
 
 Install Oh My ZSH
 ```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-Install ZSH Syntaxe Highlight
-```
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+pamac install oh-my-zsh
 ```
 
 Install ZSH Theme Poweline
 ```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+pamac install zsh-theme-powerlevel10k
 ```
 
 ### Git
