@@ -4,9 +4,9 @@ This repository contains a all configuration files for my development environmen
 
 ## Tools
 
-Install `alacrity`
+Install `alacritty`
 ```
-pamac install alacrity
+pamac install alacritty
 ```
 
 Install `tmux`
