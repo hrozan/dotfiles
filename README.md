@@ -108,6 +108,11 @@ sudo systemctl start docker.service
 Add user to root group
 ```
 sudo gpasswd -a $USER docker
+
+```
+Docker Compose
+```
+pamac install docker-compose
 ```
 
 ### Neovim
