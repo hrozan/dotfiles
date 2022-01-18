@@ -1,5 +1,6 @@
 shell:
   program: /usr/bin/zsh
+
   args:
     - -c
     - "tmux attach || tmux"
@@ -9,38 +10,38 @@ env:
 
 window:
   title: "Terminal"
+    
   dimensions:
     columns: 120
     lines: 32
-  padding:
-    y: 6
-    x: 6
 
-# background_opacity: 0.9
+  padding:
+    y: 8
+    x: 8
 
 cursor:
   style: Underline
+
 font:
-  size: 13.0
+  size: 14.0
+
   normal:
     family: CaskaydiaCove Nerd Font Mono
     style: Regular
+
   bold:
     family: CaskaydiaCove Nerd Font Mono
     style: Bold
+
   italic:
     family: Droid Sans Mono Slashed for Powerline
 
 colors:
-  # Default colors
   primary:
-    background: '#14161b'
+    background: '#282c34'
     foreground: '#abb2bf'
 
-  # Normal colors
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
     black: '#282c34'
     red: '#e06c75'
     green: '#98c379'
@@ -50,7 +51,6 @@ colors:
     cyan: '#56b6c2'
     white: '#abb2bf'
 
-  # Bright colors
   bright:
     black: '#5c6370'
     red: '#e06c75'
@@ -61,5 +61,4 @@ colors:
     cyan: '#56b6c2'
     white: '#ffffff'
 
-theme: One-Dark
 
