@@ -1,12 +1,9 @@
-# Enable Powerline10k Theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # Add bin 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Setup Oh My ZSH
 ZSH=/usr/share/oh-my-zsh/
+ZSH_THEME='robbyrussell'
 
 # Plugins
 plugins=(
@@ -45,8 +42,9 @@ alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
 # Node NVM
 source /usr/share/nvm/init-nvm.sh
 
-# Go
+# Go GVM
 export PATH=$PATH:$HOME/go/bin
+source /home/hrozan/.gvm/scripts/gvm
 
 # Bat
 export BAT_THEME="TwoDark"

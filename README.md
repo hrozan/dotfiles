@@ -29,6 +29,11 @@ Install Jetbrains ToolBox
 pamac install jetbrains-toolbox
 ```
 
+Install Albert Laucher
+```
+pamac install albert-bin
+```
+
 ### Nerd Fonts
 
 Cascadia Code
@@ -46,11 +51,6 @@ pamac install nerd-fonts-ubuntu-mono
 Install Oh My ZSH
 ```
 pamac install oh-my-zsh
-```
-
-Install ZSH Theme Poweline
-```
-pamac install zsh-theme-powerlevel10k
 ```
 
 ### Git
@@ -126,11 +126,6 @@ Install Packer
 ```
 pamac install nvim-packer-git
 ```
-
-Install NVChad
-````
-git clone https://github.com/NvChad/NvChad ~/.config/nvim
-``````
 
 #### LSP
 

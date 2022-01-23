@@ -16,8 +16,8 @@ window:
     lines: 32
 
   padding:
-    y: 8
-    x: 4
+    y: 4
+    x: 2
 
 cursor:
   style: Underline
@@ -38,7 +38,7 @@ font:
 
 colors:
   primary:
-    background: '#1e232a'
+    background: '#1b1d24'
     foreground: '#abb2bf'
 
   normal:
