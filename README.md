@@ -2,12 +2,41 @@
 
 This repository contains a all configuration files for my development environment and some instruction to install some dependencies and tools
 
-## Tools
+## Fonts
+
+Cascadia Code
+```
+pamac install nerd-fonts-cascadia-code
+```
+
+Ubuntu Mono 
+```
+pamac install nerd-fonts-ubuntu-mono
+```
+
+## Applications
 
 Install `alacritty`
 ```
 pamac install alacritty
 ```
+
+Install Neovim
+```
+pamac install neovim
+```
+
+Install Jetbrains ToolBox
+```
+pamac install jetbrains-toolbox
+```
+
+Install Albert Laucher
+```
+pamac install albert-bin
+```
+
+## Tools
 
 Install `tmux`
 ```
@@ -24,36 +53,19 @@ Install `bat`
 pamac install bat
 ```
 
-Install Jetbrains ToolBox
-```
-pamac install jetbrains-toolbox
-```
-
-Install Albert Laucher
-```
-pamac install albert-bin
-```
-
-### Nerd Fonts
-
-Cascadia Code
-```
-pamac install nerd-fonts-cascadia-code
-```
-
-Ubuntu Mono 
-```
-pamac install nerd-fonts-ubuntu-mono
-```
-
-### ZSH
+### Terminal Tools
 
 Install Oh My ZSH
 ```
 pamac install oh-my-zsh
 ```
 
-### Git
+Install Powerline 10k
+```
+pamac install zsh-theme-powerlevel10k
+```
+
+### Git Tools
 
 Install git diff tool
 ```
@@ -67,10 +79,18 @@ pamac install github-cli
 
 ## Environment Setup
 
+### Go
 Install `go`
 ```
 pamac install go
 ```
+
+Install `gvm`
+```
+pamac install gvm
+```
+
+### Node
 
 Install `node`
 ```
@@ -115,19 +135,7 @@ Docker Compose
 pamac install docker-compose
 ```
 
-### Neovim
-
-Install Neovim
-```
-pamac install neovim
-```
-
-Install Packer
-```
-pamac install nvim-packer-git
-```
-
-#### LSP
+## Languages Server 
 
 Install `gopls`
 ```

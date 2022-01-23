@@ -1,11 +1,12 @@
-# Add bin 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Enable Powerlevel10k
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Setup Oh My ZSH
+# Enable Oh My ZSH
 ZSH=/usr/share/oh-my-zsh/
-ZSH_THEME='robbyrussell'
-
-# Plugins
 plugins=(
   archlinux
   golang
@@ -16,15 +17,16 @@ plugins=(
   docker-compose
   github
 )
-
-# Oh My zsh 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Editor
+# Add directories to path
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Set default editor
 export EDITOR='nvim'
 
-# Alias
+# Set custom alias
 alias vi='nvim'
 alias viconf='nvim ~/.config/nvim/lua/custom/init.lua'
 alias viconf-chad='nvim ~/.config/nvim/lua/custom/chadrc.lua'
@@ -48,4 +50,3 @@ source /home/hrozan/.gvm/scripts/gvm
 
 # Bat
 export BAT_THEME="TwoDark"
-
