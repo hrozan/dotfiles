@@ -26,6 +26,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Set default editor
 export EDITOR='nvim'
 
+# Bat
+export BAT_THEME="TwoDark"
+
 # Set custom alias
 alias vi='nvim'
 alias viconf='nvim ~/.config/nvim/lua/custom/init.lua'
@@ -44,9 +47,3 @@ alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
 # Node NVM
 source /usr/share/nvm/init-nvm.sh
 
-# Go GVM
-export PATH=$PATH:$HOME/go/bin
-source /home/hrozan/.gvm/scripts/gvm
-
-# Bat
-export BAT_THEME="TwoDark"
