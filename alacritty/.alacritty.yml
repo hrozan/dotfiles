@@ -19,10 +19,6 @@ window:
     y: 4
     x: 2
 
-cursor:
-  style: 
-    shape: Beam
-
 font:
   size: 14.0
 
