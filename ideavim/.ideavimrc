@@ -1,4 +1,4 @@
-" Plugins
+" Plugi
 set commentary
 set surround
 set NERDTree
@@ -6,7 +6,7 @@ set sneak
 
 " Config
 set number relativenumber
-set nu rnu
+set nu rnl
 set clipboard+=unnamed
 set clipboard+=ideaput
 
