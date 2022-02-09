@@ -21,7 +21,7 @@ window:
 
 cursor:
   style: 
-    shape: Underline
+    shape: Beam
 
 font:
   size: 14.0
