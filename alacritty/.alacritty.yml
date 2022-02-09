@@ -20,7 +20,8 @@ window:
     x: 2
 
 cursor:
-  style: Underline
+  style: 
+    shape: Underline
 
 font:
   size: 14.0
@@ -38,29 +39,18 @@ font:
 
 colors:
   primary:
-    background: '#0f111a'
-    foreground: '0xb3b1ad'
+    background: '0x0f111a'
+    foreground: '0xD8DEE9'
+
+  cursor:
+    cursor: '#ffffff'
 
   normal:
-    black:   '0x484f58'
-    red:     '0xff7b72'
-    green:   '0x3fb950'
-    yellow:  '0xd29922'
-    blue:    '0x58a6ff'
-    magenta: '0xbc8cff'
-    cyan:    '0x39c5cf'
-    white:   '0xb1bac4'
-
-  bright:
-    black:   '0x6e7681'
-    red:     '0xffa198'
-    green:   '0x56d364'
-    yellow:  '0xe3b341'
-    blue:    '0x79c0ff'
-    magenta: '0xd2a8ff'
-    cyan:    '0x56d4dd'
-    white:   '0xf0f6fc'
-
-  indexed_colors:
-    - { index: 16, color: '0xd18616' }
-    - { index: 17, color: '0xffa198' }
+    black:      '0x4C566A'
+    red:        '0xBF616A'
+    green:      '0xA3BE8C'
+    yellow:     '0xEBCB8B'
+    blue:       '0x81A1C1'
+    magenta:    '0xB48EAD'
+    cyan:       '0x88C0D0'
+    white:      '0xE5E9F0'
