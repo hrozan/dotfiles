@@ -8,8 +8,10 @@ shell:
 env:
   TERM: xterm-256color
 
+
 window:
   title: "Terminal"
+  opacity: 0.9
 
   dimensions:
     columns: 120
