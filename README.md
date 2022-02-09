@@ -31,11 +31,6 @@ Install Jetbrains ToolBox
 pamac install jetbrains-toolbox
 ```
 
-Install Albert Laucher
-```
-pamac install albert-bin
-```
-
 ## Tools
 
 Install `tmux`
@@ -79,15 +74,16 @@ pamac install github-cli
 
 ## Environment Setup
 
-### Go
-Install `go`
+### Rust
+
+Install `rustup`
 ```
-pamac install go
+pamac install rustup
 ```
 
-Install `gvm`
+Install toolchain
 ```
-pamac install gvm
+rustup toolchain install stable
 ```
 
 ### Node
@@ -133,36 +129,4 @@ sudo gpasswd -a $USER docker
 Docker Compose
 ```
 pamac install docker-compose
-```
-
-## Languages Server 
-
-Install `gopls`
-```
-go install golang.org/x/tools/gopls@latest
-```
-
-Install `tsserver`
-```
-sudo npm install -g typescript typescript-language-server
-```
-
-Install `yamlls`
-```
-sudo npm install -g yaml-language-server
-```
-
-Install `jsonls`
-```
-sudo npm i -g vscode-langservers-extracted
-```
-
-Install `dockerls`
-```
-sudo npm install -g dockerfile-language-server-nodejs
-```
-
-Install `emmetls`
-```
-sudo npm install -g emmet-ls 
 ```

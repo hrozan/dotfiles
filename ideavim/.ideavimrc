@@ -15,9 +15,6 @@ nmap gi :action GotoImplementation<CR>
 nmap rn :action RenameElement<CR>
 
 nmap <A-q> :action CloseEditor<CR>
-nmap <leader>r :action Run<CR>
-nmap <leader>e :NERDTreeFocus<CR>
 nmap <leader>xa :action CloseAllEditors<CR>
-nmap <leader>ff :action GotoFile<CR>
 nnoremap <leader>rl :action IdeaVim.ReloadVimRc.reload<CR>
 
