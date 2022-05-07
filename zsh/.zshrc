@@ -1,45 +1,38 @@
-# Enable Powerlevel10k
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(starship init zsh)"
+
+# Tmux
+ZSH_TMUX_AUTOSTART=true
 
 # Enable Oh My ZSH
-ZSH=/usr/share/oh-my-zsh/
+ZSH=$HOME/.oh-my-zsh/
 plugins=(
+  tmux
   archlinux
-  golang
+  fzf-zsh-plugin
   node
   npm
   yarn
   docker
   docker-compose
   github
+  rust
 )
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add directories to path
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Set default editor
 export EDITOR='nvim'
 
-# Bat
-export BAT_THEME="TwoDark"
-
 # Set custom alias
+alias g='git'
 alias vi='nvim'
-alias viconf='nvim ~/.config/nvim/lua/custom/init.lua'
-alias viconf-chad='nvim ~/.config/nvim/lua/custom/chadrc.lua'
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias nvimconfig="nvim ~/.config/nvim/init.vim"
-# Change ls to exa
+alias http='curlie'
+alias l='exa'
 alias ls='exa'
-alias ll='exa -lh --git'
-alias la='exa -lh --git -a '
+alias la='exa -lh --git --icons -a'
 # Packages
 alias packages-orphans-list='pacman -Qdt'
 alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
@@ -47,3 +40,5 @@ alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
 # Node NVM
 source /usr/share/nvm/init-nvm.sh
 
+# Bat
+export BAT_THEME="TwoDark"
