@@ -61,11 +61,6 @@ sudo pamac install bat
 
 Install `bat`
 ```
-sudo pamac install fzf
-```
-
-Install `bat`
-```
 sudo pamac install curlie
 ```
 
