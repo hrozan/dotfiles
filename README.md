@@ -143,6 +143,11 @@ Install Dash to Panel
 sudo pamac install ulauncher 
 ```
 
+Install Gnome Extention Plugin 
+```
+sudo pamac install chrome-gnome-shell 
+```
+
 Install Dash to Panel
 ```
 sudo pamac install gnome-shell-extension-dash-to-panel 
