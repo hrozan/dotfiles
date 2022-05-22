@@ -79,11 +79,6 @@ Install Zsh FZF Plugin
 git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin
 ```
 
-Install Starship
-```
-sudo pamac install starship
-```
-
 Install git diff tool
 ```
 sudo pamac install git-delta
