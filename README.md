@@ -38,6 +38,11 @@ Install `alacritty`
 sudo pamac install alacritty
 ```
 
+Install `alacritty`
+```
+sudo pamac install starship
+```
+
 Install Neovim
 ```
 sudo pamac install neovim
