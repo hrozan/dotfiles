@@ -6,17 +6,22 @@ This repository contains a all configuration files for my development environmen
 
 ### Start
 
+Install 1password
+```
+flatpak install https://downloads.1password.com/linux/flatpak/1Password-beta.flatpakref &&\
+flatpak run com.onepassword.OnePassword
+```
+
 Install Github CLI
 ```
-sudo pamac install github-cli
-```
-```
+sudo pamac install github-cli &&\
 gh auth login
 ```
 
 Clone dotfiles
 ```
-cd $HOME/.config && gh repo clone hrozan/dotfiles
+cd $HOME/.config &&\
+gh repo clone hrozan/dotfiles
 ```
 
 ### Fonts
@@ -53,6 +58,11 @@ Install `tmux`
 sudo pamac install tmux
 ```
 
+Install `fzf`
+```
+sudo pamac install fzf
+```
+
 Install `exa`
 ```
 sudo pamac install exa
@@ -63,6 +73,16 @@ Install `bat`
 sudo pamac install bat
 ```
 
+Install `bat`
+```
+sudo pamac install fzf
+```
+
+Install `bat`
+```
+sudo pamac install curlie
+```
+
 Install Oh My ZSH
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -71,6 +91,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 Install Zsh Syntax Highlighting
 ```
 sudo pamac install zsh-syntax-highlighting
+```
+
+Install Zsh FZF Plugin
+```
+git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin
 ```
 
 Install Starship
