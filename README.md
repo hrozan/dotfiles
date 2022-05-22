@@ -135,3 +135,30 @@ Docker Compose
 ```
 sudo pamac install docker-compose
 ```
+
+### Extras
+
+Install Dash to Panel
+```
+sudo pamac install ulauncher 
+```
+
+Install Dash to Panel
+```
+sudo pamac install gnome-shell-extension-dash-to-panel 
+```
+
+Install Spotify
+```
+flatpak install flathub com.spotify.Client
+```
+
+Install Discord
+```
+flatpak install flathub com.discordapp.Discord
+```
+
+Install Dropbox
+```
+flatpak install flathub com.dropbox.Client
+```
