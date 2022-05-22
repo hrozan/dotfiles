@@ -14,29 +14,20 @@ flatpak run com.onepassword.OnePassword
 
 Install Github CLI
 ```
-sudo pamac install github-cli &&\
+sudo pamac install github-cli
+```
+
+Login Github
+```
 gh auth login
 ```
 
 Clone dotfiles
 ```
-cd $HOME/.config &&\
-gh repo clone hrozan/dotfiles
+gh repo clone hrozan/dotfiles $HOME/.config/dotfiles
 ```
 
-### Fonts
-
-Cascadia Code
-```
-sudo pamac install nerd-fonts-cascadia-code
-```
-
-Ubuntu Mono 
-```
-sudo pamac install nerd-fonts-ubuntu-mono
-```
-
-## Tools
+### Tools
 
 Install `alacritty`
 ```
@@ -46,11 +37,6 @@ sudo pamac install alacritty
 Install `alacritty`
 ```
 sudo pamac install starship
-```
-
-Install Neovim
-```
-sudo pamac install neovim
 ```
 
 Install `tmux`
@@ -108,22 +94,38 @@ Install git diff tool
 sudo pamac install git-delta
 ```
 
-## Dev Environment Setup
+### Fonts
+
+Cascadia Code
+```
+sudo pamac install nerd-fonts-cascadia-code
+```
+
+Ubuntu Mono 
+```
+sudo pamac install nerd-fonts-ubuntu-mono
+```
+
+### Dev Environment Setup
+
+#### IDEs
+
+Install Neovim
+```
+sudo pamac install neovim
+```
+
+Clone neovim config
+```
+gh repo clone hrozan/nvim $HOME/.config/nvim
+```
 
 Install Jetbrains ToolBox
 ```
 sudo pamac install jetbrains-toolbox
 ```
 
-Install `rustup`
-```
-sudo pamac install rustup
-```
-
-Install toolchain
-```
-sudo rustup toolchain install stable
-```
+#### Node
 
 Install `node`
 ```
@@ -144,6 +146,57 @@ Install `yarn`
 ```
 sudo pamac install yarn 
 ```
+
+Install Typescript
+```
+sudo npm install -g typescript typescript-language-server yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
+```
+
+Install prettier
+```
+sudo npm install -g prettier
+```
+
+#### Rust
+
+Install rustup
+```
+sudo pamac install rustup
+```
+
+Install default toolchain
+```
+sudo rustup toolchain install stable
+```
+
+Install rust analyzer
+```
+sudo pamac install rust-analyzer
+```
+
+#### Lua
+
+Install Lua 
+```
+sudo pamac install lua
+```
+
+Install Lua Server 
+```
+sudo pamac install lua-language-server
+```
+
+Install Lua Rocks 
+```
+sudo pamac install luarocks
+```
+
+Install Lua Formatter 
+```
+luarocks install --server=https://luarocks.org/dev luaformatter
+```
+
+#### Docker
 
 Install `docker`
 ```
