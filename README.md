@@ -59,9 +59,19 @@ Install `bat`
 sudo pamac install bat
 ```
 
-Install `bat`
+Install `curlie`
 ```
 sudo pamac install curlie
+```
+
+Install zsh
+```
+sudo pamac install zsh
+```
+
+Install zsh completion
+```
+sudo pamac install zsh-completions
 ```
 
 Install Oh My ZSH
@@ -110,8 +120,7 @@ Clone neovim config
 gh repo clone hrozan/nvim $HOME/.config/nvim
 ```
 
-
-Clone neovim config
+Install Neovim Packer
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -127,6 +136,11 @@ sudo pamac install jetbrains-toolbox
 Install `node`
 ```
 sudo pamac install nodejs
+```
+
+Install `npm`
+```
+sudo pamac install npm 
 ```
 
 Install `nvm`
@@ -163,7 +177,7 @@ sudo pamac install rustup
 
 Install default toolchain
 ```
-sudo rustup toolchain install stable
+rustup toolchain install stable
 ```
 
 Install rust analyzer
@@ -190,7 +204,7 @@ sudo pamac install luarocks
 
 Install Lua Formatter 
 ```
-luarocks install --server=https://luarocks.org/dev luaformatter
+sudo luarocks install --server=https://luarocks.org/dev luaformatter
 ```
 
 #### Docker
