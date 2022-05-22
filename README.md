@@ -110,6 +110,13 @@ Clone neovim config
 gh repo clone hrozan/nvim $HOME/.config/nvim
 ```
 
+
+Clone neovim config
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 Install Jetbrains ToolBox
 ```
 sudo pamac install jetbrains-toolbox
