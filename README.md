@@ -2,100 +2,107 @@
 
 This repository contains a all configuration files for my development environment and some instruction to install some dependencies and tools
 
-## Fonts
+## For Arch Linux
+
+### Start
+
+Install Github CLI
+```
+sudo pamac install github-cli
+```
+```
+gh auth login
+```
+
+Clone dotfiles
+```
+cd $HOME/.config && gh repo clone hrozan/dotfiles
+```
+
+### Fonts
 
 Cascadia Code
 ```
-pamac install nerd-fonts-cascadia-code
+sudo pamac install nerd-fonts-cascadia-code
 ```
 
 Ubuntu Mono 
 ```
-pamac install nerd-fonts-ubuntu-mono
-```
-
-## Applications
-
-Install `alacritty`
-```
-pamac install alacritty
-```
-
-Install Neovim
-```
-pamac install neovim
-```
-
-Install Jetbrains ToolBox
-```
-pamac install jetbrains-toolbox
+sudo pamac install nerd-fonts-ubuntu-mono
 ```
 
 ## Tools
 
+Install `alacritty`
+```
+sudo pamac install alacritty
+```
+
+Install Neovim
+```
+sudo pamac install neovim
+```
+
 Install `tmux`
 ```
-pamac install tmux
+sudo pamac install tmux
 ```
 
 Install `exa`
 ```
-pamac install exa
+sudo pamac install exa
 ```
 
 Install `bat`
 ```
-pamac install bat
+sudo pamac install bat
 ```
-
-### Terminal Tools
 
 Install Oh My ZSH
 ```
-pamac install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Install Powerline 10k
+Install Zsh Syntax Highlighting
 ```
-pamac install zsh-theme-powerlevel10k
+sudo pamac install zsh-syntax-highlighting
 ```
 
-### Git Tools
+Install Starship
+```
+sudo pamac install starship
+```
 
 Install git diff tool
 ```
-pamac install git-delta
+sudo pamac install git-delta
 ```
 
-Install Github CLI
-```
-pamac install github-cli
-```
+## Dev Environment Setup
 
-## Environment Setup
-
-### Rust
+Install Jetbrains ToolBox
+```
+sudo pamac install jetbrains-toolbox
+```
 
 Install `rustup`
 ```
-pamac install rustup
+sudo pamac install rustup
 ```
 
 Install toolchain
 ```
-rustup toolchain install stable
+sudo rustup toolchain install stable
 ```
-
-### Node
 
 Install `node`
 ```
-pamac install nodejs
+sudo pamac install nodejs
 ```
 
 Install `nvm`
 ```
-pamac install nvm 
+sudo pamac install nvm 
 ```
 
 Set default node to system
@@ -105,14 +112,12 @@ nvm alias default system
 
 Install `yarn`
 ```
-pamac install yarn 
+sudo pamac install yarn 
 ```
-
-### Docker
 
 Install `docker`
 ```
-pamac install docker
+sudo pamac install docker
 ```
 
 Start service
@@ -128,5 +133,5 @@ sudo gpasswd -a $USER docker
 ```
 Docker Compose
 ```
-pamac install docker-compose
+sudo pamac install docker-compose
 ```
