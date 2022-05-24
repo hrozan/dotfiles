@@ -6,11 +6,13 @@ ZSH_TMUX_AUTOSTART=true
 # Enable Oh My ZSH
 ZSH=$HOME/.oh-my-zsh/
 plugins=(
+  git
+  gh
   tmux
-  archlinux
   fzf-zsh-plugin
   node
   npm
+  nvm
   yarn
   docker
   docker-compose
