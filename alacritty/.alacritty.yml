@@ -6,7 +6,7 @@ env:
 
 window:
   title: "Terminal"
-  opacity: 0.9
+  opacity: 0.85
   gtk_theme_variant: "dark"
 
   dimensions:
@@ -31,6 +31,7 @@ font:
   italic:
     family: Droid Sans Mono Slashed for Powerline
 
+theme: One-Dark
 colors:
   primary:
     background: '#000000'
@@ -55,4 +56,8 @@ colors:
     magenta: '#c678dd'
     cyan: '#56b6c2'
     white: '#ffffff'
-theme: One-Dark
+
+key_bindings:
+  - { key: I, mods: Control, action: ToggleViMode }
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
