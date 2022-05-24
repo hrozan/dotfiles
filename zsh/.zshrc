@@ -28,6 +28,7 @@ export EDITOR='nvim'
 
 # Set custom alias
 alias g='git'
+alias n='npm'
 alias vi='nvim'
 alias http='curlie'
 alias l='exa'
