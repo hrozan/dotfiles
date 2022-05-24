@@ -32,6 +32,7 @@ export EDITOR='nvim'
 alias g='git'
 alias n='npm'
 alias vi='nvim'
+alias dc='docker-compose'
 alias http='curlie'
 alias l='exa'
 alias ls='exa'
@@ -45,3 +46,5 @@ source /usr/share/nvm/init-nvm.sh
 
 # Bat
 export BAT_THEME="TwoDark"
+
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
