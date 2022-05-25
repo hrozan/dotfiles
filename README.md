@@ -29,37 +29,37 @@ gh repo clone hrozan/dotfiles $HOME/.config/dotfiles
 
 ### Tools
 
-Install `alacritty`
+Install Alacritty
 ```
 sudo pamac install alacritty
 ```
 
-Install `alacritty`
+Install starship
 ```
 sudo pamac install starship
 ```
 
-Install `tmux`
+Install tmux
 ```
 sudo pamac install tmux
 ```
 
-Install `fzf`
+Install fzf
 ```
 sudo pamac install fzf
 ```
 
-Install `exa`
+Install exa
 ```
 sudo pamac install exa
 ```
 
-Install `bat`
+Install bat
 ```
 sudo pamac install bat
 ```
 
-Install `curlie`
+Install curlie
 ```
 sudo pamac install curlie
 ```
@@ -108,42 +108,19 @@ sudo pamac install nerd-fonts-ubuntu-mono
 
 ### Dev Environment Setup
 
-#### IDEs
-
-Install Neovim
-```
-sudo pamac install neovim
-```
-
-Clone neovim config
-```
-gh repo clone hrozan/nvim $HOME/.config/nvim
-```
-
-Install Neovim Packer
-```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-Install Jetbrains ToolBox
-```
-sudo pamac install jetbrains-toolbox
-```
-
 #### Node
 
-Install `node`
+Install Node
 ```
 sudo pamac install nodejs
 ```
 
-Install `npm`
+Install npm
 ```
 sudo pamac install npm 
 ```
 
-Install `nvm`
+Install nvm
 ```
 sudo pamac install nvm 
 ```
@@ -153,14 +130,19 @@ Set default node to system
 nvm alias default system
 ```
 
-Install `yarn`
+Install yarn
 ```
 sudo pamac install yarn 
 ```
 
-Install Typescript
+Install Typescript LSP
 ```
-sudo npm install -g typescript typescript-language-server yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
+sudo npm install -g typescript typescript-language-server
+```
+
+Instal Other LSPs
+```
+sudo npm install -g yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
 ```
 
 Install prettier
@@ -169,8 +151,8 @@ sudo npm install -g prettier
 ```
 
 #### Rust
-
 Install rustup
+
 ```
 sudo pamac install rustup
 ```
@@ -207,6 +189,36 @@ Install Lua Formatter
 sudo luarocks install --server=https://luarocks.org/dev luaformatter
 ```
 
+#### Neovim
+
+Install Neovim
+```
+sudo pamac install neovim
+```
+
+Install Neovim Packer
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+Clone neovim config
+```
+gh repo clone hrozan/nvim $HOME/.config/nvim
+```
+
+Install plugins
+```
+nvim -c "PackerSync"
+```
+
+#### Jetbrains Toolbox
+
+Install Jetbrains ToolBox
+```
+sudo pamac install jetbrains-toolbox
+```
+
 #### Docker
 
 Install `docker`
@@ -223,8 +235,8 @@ sudo systemctl start docker.service
 Add user to root group
 ```
 sudo gpasswd -a $USER docker
-
 ```
+
 Docker Compose
 ```
 sudo pamac install docker-compose
@@ -232,7 +244,7 @@ sudo pamac install docker-compose
 
 ### Extras
 
-Install Dash to Panel
+Install Ulauncher
 ```
 sudo pamac install ulauncher 
 ```
@@ -240,11 +252,6 @@ sudo pamac install ulauncher
 Install Gnome Extention Plugin 
 ```
 sudo pamac install chrome-gnome-shell 
-```
-
-Install Dash to Panel
-```
-sudo pamac install gnome-shell-extension-dash-to-panel 
 ```
 
 Install Spotify
@@ -261,3 +268,165 @@ Install Dropbox
 ```
 flatpak install flathub com.dropbox.Client
 ```
+
+## For windows
+
+### Nerd Fonts
+
+Install CascadiaCode and Ubuntu on [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
+### Start
+
+Install scoop
+```powershell
+ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+```powershell
+irm get.scoop.sh | iex
+```
+```
+scoop bucket add main
+```
+```
+scoop bucket add extras
+```
+
+Install git
+```
+scoop install git
+```
+
+Install gh
+```
+scoop install gh
+```
+
+Login Github
+```
+gh auth login
+```
+
+Clone dotfiles
+```
+gh repo clone hrozan/dotfiles
+```
+
+Install touch
+```
+scoop install touch
+```
+
+Install bat
+```
+scoop install bat
+```
+
+Install starship
+```
+scoop install starship
+```
+
+Copy starship config
+```
+cp .\dotfiles\starship\starship.toml .\.config\
+```
+
+Install fzf
+```
+scoop install fzf
+```
+
+Install curlie
+```
+scoop install curlie
+```
+
+Install Powershell Nerd Icons
+```
+Install-Module Terminal-Icons
+```
+
+Install Powershell PSFzf 
+```
+Install-Module PSFzf 
+```
+
+Copy Powershell config
+```
+cp .\dotfiles\powershell\Microsoft.PowerShell_profile.ps1 .\Documents\PowerShell\
+```
+
+### Node
+
+Install node
+```
+scoop install nodejs
+```
+
+Install yarn
+```
+scoop install yarn
+```
+
+Install Typescript LSP
+```
+sudo npm install -g typescript typescript-language-server
+```
+
+Instal Other LSPs
+```
+sudo npm install -g yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
+```
+
+### Rust
+
+Install rustup
+```
+scoop install rustup
+```
+
+Install LSP
+```
+scoop install rust-analyzer
+```
+
+### IDEs
+
+#### Neovim
+
+Install mingw (for Treesitter)
+```
+scoop install mingw
+```
+
+Install neovim
+```
+scoop install neovim
+```
+
+Install packer
+```
+git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+```
+
+Clone configs
+```
+gh repo clone hrozan/nvim .\AppData\Local\nvim
+```
+
+Install plugins
+```
+nvim -c "PackerSync"
+```
+
+#### Jetbrains Toolbox
+
+Install [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+
+#### WSL
+
+Install Windowns Subsystem for Linux - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
+
+### Docker
+
+Install [Docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module)

@@ -17,6 +17,8 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 
 # Alias
 Set-Alias g git
+Set-Alias n npm
+Set-Alias y yarn
 Set-Alias l ls
 Set-Alias vi nvim
 Set-Alias web webstorm.cmd 
