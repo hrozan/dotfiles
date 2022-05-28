@@ -6,7 +6,6 @@ env:
 
 window:
   title: "Terminal"
-  opacity: 0.85
   gtk_theme_variant: "dark"
 
   dimensions:
