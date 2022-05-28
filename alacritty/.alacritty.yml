@@ -1,9 +1,3 @@
-shell:
-  program: "/usr/bin/zsh"
-
-env:
-  TERM: xterm-256color
-
 window:
   title: "Terminal"
   gtk_theme_variant: "dark"
@@ -13,8 +7,8 @@ window:
     lines: 32
 
   padding:
-    y: 4
-    x: 2
+    y: 6
+    x: 4
 
 font:
   size: 12.0
@@ -59,4 +53,3 @@ colors:
 key_bindings:
   - { key: I, mods: Control, action: ToggleViMode }
   - { key: V, mods: Control, action: Paste }
-  - { key: C, mods: Control, action: Copy }
