@@ -14,7 +14,7 @@ flatpak run com.onepassword.OnePassword
 
 Install Github CLI
 ```
-sudo pamac install github-cli
+sudo pacman -S  github-cli
 ```
 
 Login Github
@@ -36,42 +36,42 @@ sudo pamac install alacritty
 
 Install starship
 ```
-sudo pamac install starship
+sudo pacman -S starship
 ```
 
 Install tmux
 ```
-sudo pamac install tmux
+sudo pacman -S tmux
 ```
 
 Install fzf
 ```
-sudo pamac install fzf
+sudo pacman -S fzf
 ```
 
 Install exa
 ```
-sudo pamac install exa
+sudo pacman -S exa
 ```
 
 Install bat
 ```
-sudo pamac install bat
+sudo pacman -S bat
 ```
 
 Install curlie
 ```
-sudo pamac install curlie
+sudo pacman -S curlie
 ```
 
 Install zsh
 ```
-sudo pamac install zsh
+sudo pacman -S zsh
 ```
 
 Install zsh completion
 ```
-sudo pamac install zsh-completions
+sudo pacman -S zsh-completions
 ```
 
 Install Oh My ZSH
@@ -81,7 +81,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 Install Zsh Syntax Highlighting
 ```
-sudo pamac install zsh-syntax-highlighting
+sudo pacman -S zsh-syntax-highlighting
 ```
 
 Install Zsh FZF Plugin
@@ -91,7 +91,7 @@ git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-z
 
 Install git diff tool
 ```
-sudo pamac install git-delta
+sudo pacman -S git-delta
 ```
 
 ### Fonts
@@ -112,17 +112,17 @@ sudo pamac install nerd-fonts-ubuntu-mono
 
 Install Node
 ```
-sudo pamac install nodejs
+sudo pacman -S nodejs
 ```
 
 Install npm
 ```
-sudo pamac install npm 
+sudo pacman -S npm 
 ```
 
 Install nvm
 ```
-sudo pamac install nvm 
+sudo pacman -S nvm 
 ```
 
 Set default node to system
@@ -132,7 +132,7 @@ nvm alias default system
 
 Install yarn
 ```
-sudo pamac install yarn 
+sudo sudo pacman -S yarn 
 ```
 
 Install Typescript LSP
