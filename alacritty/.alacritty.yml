@@ -1,3 +1,4 @@
+
 window:
   title: "Terminal"
   gtk_theme_variant: "dark"
@@ -49,6 +50,9 @@ colors:
     magenta: '#c678dd'
     cyan: '#56b6c2'
     white: '#ffffff'
+
+env:
+  TERM: xterm-256color
 
 key_bindings:
   - { key: I, mods: Control, action: ToggleViMode }
