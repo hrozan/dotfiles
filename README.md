@@ -106,6 +106,16 @@ Ubuntu Mono
 sudo pamac install nerd-fonts-ubuntu-mono
 ```
 
+Jebrains Mono
+```
+yay -S ttf-jetbrains-mono
+```
+
+Jetbrains Mono Nerd Font
+```
+yay -S nerd-fonts-jetbrains-mono-160
+```
+
 ### Dev Environment Setup
 
 #### Node
