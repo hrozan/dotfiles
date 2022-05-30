@@ -8,8 +8,8 @@ window:
   dynamic_title: false
 
   dimensions:
-    columns: 120
-    lines: 32
+    columns: 140
+    lines: 40
 
   padding:
     y: 6

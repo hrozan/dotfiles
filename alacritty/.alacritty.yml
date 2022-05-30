@@ -4,8 +4,8 @@ window:
   gtk_theme_variant: "dark"
 
   dimensions:
-    columns: 120
-    lines: 32
+    columns: 140
+    lines: 40
 
   padding:
     y: 6
@@ -15,15 +15,14 @@ font:
   size: 12.0
 
   normal:
-    family: CaskaydiaCove Nerd Font Mono
-    style: Regular
+    family: JetBrainsMonoMedium Nerd Font
 
   bold:
-    family: CaskaydiaCove Nerd Font Mono
-    style: Bold
+    family: JetBrainsMonoExtraBold Nerd Font
 
   italic:
-    family: Droid Sans Mono Slashed for Powerline
+    family: JetBrainsMonoMedium Nerd Font
+    style: Medium Italic
 
 theme: One-Dark
 colors:
