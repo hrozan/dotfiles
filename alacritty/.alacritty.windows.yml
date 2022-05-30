@@ -1,0 +1,57 @@
+shell:
+  program: wsl -d Arch
+
+working_directory: \\wsl.localhost\Arch\home\hrozan
+
+window:
+  title: ""
+  dynamic_title: false
+
+  dimensions:
+    columns: 120
+    lines: 32
+
+  padding:
+    y: 6
+    x: 6
+
+font:
+  size: 12.0
+  normal:
+    family: JetBrainsMonoMedium NF
+
+  bold:
+    family: JetBrainsMonoExtraBold NF
+
+  italic:
+    family: JetBrainsMono
+    style: Italic
+
+colors:
+  primary:
+    background: '#0A0E14'
+    foreground: '#B3B1AD'
+
+  normal:
+    black: '#01060E'
+    red: '#EA6C73'
+    green: '#91B362'
+    yellow: '#F9AF4F'
+    blue: '#53BDFA'
+    magenta: '#FAE994'
+    cyan: '#90E1C6'
+    white: '#C7C7C7'
+
+  bright:
+    black: '#686868'
+    red: '#F07178'
+    green: '#C2D94C'
+    yellow: '#FFB454'
+    blue: '#59C2FF'
+    magenta: '#FFEE99'
+    cyan: '#95E6CB'
+    white: '#FFFFFF'
+
+key_bindings:
+  - { key: I, mods: Control, action: ToggleViMode }
+  - { key: V, mods: Control, action: Paste }
