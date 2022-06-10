@@ -406,7 +406,7 @@ scoop install rust-analyzer
 
 Install mingw (for Treesitter)
 ```
-scoop install mingw
+scoop install gcc
 ```
 
 Install neovim
