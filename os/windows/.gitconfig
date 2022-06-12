@@ -1,5 +1,5 @@
 [user]
-  email = higorb.rozan@gmail.com
+  email = higorb.rozan@hotmail.com
   name = Higor Rozan
 
 [core]
@@ -12,7 +12,8 @@
 [alias]
   s = status
   c = commit
-  a = add .
+  a = add --all
+  save = commit --all 
   mt = mergetool
   cb = checkout -b 
   cm = checkout main 
@@ -20,9 +21,7 @@
   l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
   del = branch -D    
   br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-  save = !git add -A && git commit 
-  undo = reset HEAD~1 --mixed
-  rhard = !git reset --hard
+  undo = reset --hard
 
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
@@ -40,7 +39,7 @@
   diffFilter = delta --color-only
 
 [delta]
-  navigate = true  # use n and N to move between diff sections
+  navigate = true
 
 [diff]
   colorMoved = default
