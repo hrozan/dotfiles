@@ -1,7 +1,7 @@
 shell:
-  program: wsl -d Arch
+  program: pwsh.exe --noLogo
 
-working_directory: \\wsl.localhost\Arch\home\hrozan
+working_directory: C:\Users\hrozan 
 
 window:
   title: ""
@@ -12,11 +12,11 @@ window:
     lines: 40
 
   padding:
-    y: 6
-    x: 6
+    y: 4
+    x: 4
 
 font:
-  size: 12.0
+  size: 13.0
   normal:
     family: JetBrainsMonoMedium NF
 
@@ -29,8 +29,8 @@ font:
 
 colors:
   primary:
-    background: '#0A0E14'
-    foreground: '#B3B1AD'
+    background: '#000000'
+    foreground: '#FFFFFF'
 
   normal:
     black: '#01060E'
