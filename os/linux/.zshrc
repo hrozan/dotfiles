@@ -29,7 +29,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR='nvim'
 
 # Set custom alias
-alias l='exa -lh --git --icons -a'
+alias l='exa -lh --git --icons'
 alias ls='exa'
 alias g='git'
 alias n='npm'
