@@ -1,7 +1,7 @@
 eval "$(starship init zsh)"
 
-# Tmux
-ZSH_TMUX_AUTOSTART=true
+# Enable Z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 # Enable Oh My ZSH
 ZSH=$HOME/.oh-my-zsh/
@@ -29,22 +29,18 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR='nvim'
 
 # Set custom alias
+alias l='exa -lh --git --icons -a'
+alias ls='exa'
 alias g='git'
 alias n='npm'
 alias vi='nvim'
+alias vim='neovide'
 alias dc='docker-compose'
 alias http='curlie'
-alias l='exa'
-alias ls='exa'
-alias la='exa -lh --git --icons -a'
+
 # Packages
 alias packages-orphans-list='pacman -Qdt'
 alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
 
 # Node NVM
 source /usr/share/nvm/init-nvm.sh
-
-# Bat
-export BAT_THEME="TwoDark"
-
-export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
