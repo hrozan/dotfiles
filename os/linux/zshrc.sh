@@ -1,3 +1,10 @@
+# Author: Higor Rozan
+
+# Setup Environment Variables 
+PATH=$HOME/.local/bin:$PATH
+EDITOR=nvim
+
+# Enable Starship
 eval "$(starship init zsh)"
 
 # Enable Z
@@ -8,12 +15,10 @@ ZSH=$HOME/.oh-my-zsh/
 plugins=(
   git
   gh
-  tmux
   fzf-zsh-plugin
   node
   npm
   nvm
-  yarn
   docker
   docker-compose
   github
@@ -22,25 +27,25 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Add directories to path
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-# Set default editor
-export EDITOR='nvim'
-
-# Set custom alias
-alias l='exa -lh --git --icons'
-alias ls='exa'
+# Alias
+alias l='exa --long --header --git --icons'
 alias g='git'
 alias n='npm'
+alias c='clear'
 alias vi='nvim'
-alias vim='neovide'
+alias la='exa --long --header --git --icons --all'
 alias dc='docker-compose'
 alias http='curlie'
-
-# Packages
 alias packages-orphans-list='pacman -Qdt'
 alias packages-orphans-remove='sudo pacman -Rsn $(pacman -Qdtq)'
 
-# Node NVM
+# Enable Node Version Manager
 source /usr/share/nvm/init-nvm.sh
+
+# Auxiliar Functions
+
+function vi-plugins-reset {
+    rm -rf ./plugins
+    vi -c "PackerSync"
+}
+
