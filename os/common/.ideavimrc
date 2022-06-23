@@ -1,8 +1,7 @@
-" Plugi
+" Plugins
 set commentary
 set surround
 set NERDTree
-set sneak
 
 " Config
 set number relativenumber
@@ -11,10 +10,7 @@ set clipboard+=unnamed
 set clipboard+=ideaput
 
 " Mappings
-nmap gi :action GotoImplementation<CR>
-nmap rn :action RenameElement<CR>
-
-nmap <A-q> :action CloseEditor<CR>
-nmap <leader>xa :action CloseAllEditors<CR>
-nnoremap <leader>rl :action IdeaVim.ReloadVimRc.reload<CR>
-
+nmap gi :action GotoImplementation<cr>
+nmap rn :action RenameElement<cr>
+nmap u :action $Undo<cr>
+nmap U :action $Redo<cr>
