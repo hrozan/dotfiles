@@ -27,6 +27,7 @@ alias n=npm
 alias c=clear
 alias vi=nvim
 alias http=curlie
+alias vim="neovide.exe --wsl"
 alias l='exa --long --header --git --icons'
 alias la='exa --long --header --git --icons --all'
 alias dc='docker-compose'
