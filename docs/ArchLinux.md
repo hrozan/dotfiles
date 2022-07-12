@@ -1,275 +1,279 @@
-### Start
+# Linux
+
+Install git
+
+```bash
+sudo pacman -S --needed git base-devel
+```
+
+Install yay
+
+```bash
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+```
 
 Install 1password
-```
-flatpak install https://downloads.1password.com/linux/flatpak/1Password-beta.flatpakref &&\
-flatpak run com.onepassword.OnePassword
+
+```bash
+yay -S 1password
 ```
 
 Install Github CLI
-```
-sudo pacman -S  github-cli
+
+```bash
+yay -S github-cli
 ```
 
 Login Github
-```
+
+```bash
 gh auth login
 ```
 
 Clone dotfiles
-```
+
+```bash
 gh repo clone hrozan/dotfiles $HOME/.config/dotfiles
 ```
 
-### Tools
+Install gnome browser extention
 
-Install Alacritty
+```bash
+yay -S chrome-gnome-shell
 ```
-sudo pamac install alacritty
+
+Install Kitty
+
+```bash
+sudo pamac install kitty
 ```
 
 Install starship
-```
-sudo pacman -S starship
-```
 
-Install tmux
-```
-sudo pacman -S tmux
+```bash
+yay -S starship
 ```
 
 Install fzf
-```
-sudo pacman -S fzf
+
+```bash
+yay -S fzf
 ```
 
 Install exa
-```
-sudo pacman -S exa
+
+```bash
+yay -S exa
 ```
 
 Install bat
-```
-sudo pacman -S bat
+
+```bash
+yay -S bat
 ```
 
 Install curlie
-```
-sudo pacman -S curlie
+
+```bash
+yay -S curlie
 ```
 
 Install zsh
-```
-sudo pacman -S zsh
+
+```bash
+yay -S zsh
 ```
 
 Install zsh completion
-```
-sudo pacman -S zsh-completions
+
+```bash
+yay -S zsh-completions
 ```
 
 Install Oh My ZSH
-```
+
+```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Install Zsh Syntax Highlighting
-```
-sudo pacman -S zsh-syntax-highlighting
+
+```bash
+yay -S zsh-syntax-highlighting
 ```
 
 Install Zsh FZF Plugin
-```
+
+```bash
 git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin
 ```
 
 Install git diff tool
-```
-sudo pacman -S git-delta
-```
 
-### Fonts
-
-Cascadia Code
-```
-sudo pamac install nerd-fonts-cascadia-code
-```
-
-Ubuntu Mono 
-```
-sudo pamac install nerd-fonts-ubuntu-mono
+```bash
+yay -S git-delta
 ```
 
 Jebrains Mono
-```
+
+```bash
 yay -S ttf-jetbrains-mono
 ```
 
 Jetbrains Mono Nerd Font
-```
+
+```bash
 yay -S nerd-fonts-jetbrains-mono-160
 ```
 
-### Dev Environment Setup
-
-#### Node
-
 Install Node
-```
-sudo pacman -S nodejs
+
+```bash
+yay -S nodejs
 ```
 
 Install npm
-```
-sudo pacman -S npm 
+
+```bash
+yay -S npm 
 ```
 
 Install nvm
-```
-sudo pacman -S nvm 
+
+```bash
+yay -S nvm 
 ```
 
 Set default node to system
-```
+
+```bash
 nvm alias default system
 ```
 
-Install yarn
-```
-sudo sudo pacman -S yarn 
-```
-
 Install Typescript LSP
-```
+
+```bash
 sudo npm install -g typescript typescript-language-server
 ```
 
 Instal Other LSPs
-```
+
+```bash
 sudo npm install -g yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
 ```
 
 Install prettier
-```
+
+```bash
 sudo npm install -g prettier
 ```
 
-#### Rust
 Install rustup
 
-```
-sudo pamac install rustup
+```bash
+yay -S rustup
 ```
 
 Install default toolchain
-```
+
+```bash
 rustup toolchain install stable
 ```
 
 Install rust analyzer
-```
-sudo pamac install rust-analyzer
+
+```bash
+yay -S rust-analyzer
 ```
 
-#### Lua
+Install Lua
 
-Install Lua 
-```
-sudo pamac install lua
-```
-
-Install Lua Server 
-```
-sudo pamac install lua-language-server
+```bash
+yay -S lua
 ```
 
-Install Lua Rocks 
-```
-sudo pamac install luarocks
+Install Lua Server
+
+```bash
+yay -S lua-language-server
 ```
 
-Install Lua Formatter 
-```
-sudo luarocks install --server=https://luarocks.org/dev luaformatter
+Install Lua Rocks
+
+```bash
+yay -S luarocks
 ```
 
-#### Neovim
+Install Lua Formatter
+
+```bash
+yay -S stylua
+```
 
 Install Neovim
-```
-sudo pamac install neovim
+
+```bash
+yay -S neovim
 ```
 
 Install Neovim Packer
-```
+
+```bash
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 Clone neovim config
-```
+
+```bash
 gh repo clone hrozan/nvim $HOME/.config/nvim
 ```
 
 Install plugins
-```
+
+```bash
 nvim -c "PackerSync"
 ```
 
-#### Jetbrains Toolbox
-
 Install Jetbrains ToolBox
-```
-sudo pamac install jetbrains-toolbox
-```
 
-#### Docker
+```bash
+yay -S jetbrains-toolbox
+```
 
 Install `docker`
-```
+
+```bash
 sudo pamac install docker
 ```
 
 Start service
-```
+
+```bash
 sudo systemctl enable docker.service &&\
 sudo systemctl start docker.service
 ```
 
 Add user to root group
-```
+
+```bash
 sudo gpasswd -a $USER docker
 ```
 
 Docker Compose
-```
-sudo pamac install docker-compose
-```
 
-### Extras
-
-Install Ulauncher
-```
-sudo pamac install ulauncher 
-```
-
-Install Gnome Extention Plugin 
-```
-sudo pamac install chrome-gnome-shell 
+```bash
+yay -S docker-compose
 ```
 
 Install Spotify
-```
+
+```bash
 flatpak install flathub com.spotify.Client
 ```
 
 Install Discord
-```
+
+```bash
 flatpak install flathub com.discordapp.Discord
 ```
-
-Install Dropbox
-```
-flatpak install flathub com.dropbox.Client
-```
-
