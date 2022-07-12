@@ -1,4 +1,4 @@
-# hrozan dotfiles
+# hrozan
 
 ## Linux
 
