@@ -33,12 +33,10 @@ Clone dotfiles
 gh repo clone dotfiles $HOME/.config/dotfiles
 ```
 
-
-
 Install terminal tools
 
 ```bash
-sudo pamac install kitty zsh zsh-completions starship fzf exa bat curlie 
+sudo pamac install kitty zsh zsh-completions starship fzf exa bat curlie z
 ```
 
 Install Oh My ZSH and plugins

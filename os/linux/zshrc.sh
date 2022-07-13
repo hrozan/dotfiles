@@ -7,6 +7,7 @@ plugins=(
   git
   gh
   fzf-zsh-plugin
+  zsh-syntax-highlighting
   node
   npm
   nvm
@@ -18,8 +19,9 @@ plugins=(
 
 eval "$(starship init zsh)"
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source /usr/share/nvm/init-nvm.sh
 
 alias g=git
