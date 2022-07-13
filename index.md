@@ -6,7 +6,7 @@
 Install git
 
 ```bash
-sudo pacman -S --needed git base-devel
+sudo pacman -S --needed git base-devel git-delta github-cli
 ```
 
 Install yay
@@ -18,13 +18,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 Install 1password
 
 ```bash
-yay -S 1password
-```
-
-Install Github CLI
-
-```bash
-yay -S github-cli
+yay -S git-delta github-cli 1password 
 ```
 
 Login Github
@@ -39,17 +33,7 @@ Clone dotfiles
 gh repo clone dotfiles $HOME/.config/dotfiles
 ```
 
-Install neovim
 
-```bash
-yay -S neovim neovide
-```
-
-Clone nvim
-
-```bash
-gh repo clone nvim $HOME/.config/nvim
-```
 
 Install terminal tools
 
@@ -57,36 +41,23 @@ Install terminal tools
 sudo pamac install kitty zsh zsh-completions starship fzf exa bat curlie 
 ```
 
-Install Oh My ZSH ana plugins
+Install Oh My ZSH and plugins
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&\
 git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin &&\
-
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 ```
 
-Install Zsh Syntax Highlighting
+Install neovim
 
 ```bash
-yay -S zsh-syntax-highlighting
-```
-
-Install Zsh FZF Plugin
-
-```bash
-```
-
-Install git diff tool
-
-```bash
-yay -S git-delta
-```
-
-Jebrains Mono
-
-```bash
-yay -S ttf-jetbrains-mono
+yay -S neovim neovide &&\
+gh repo clone nvim $HOME/.config/nvim &&\
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim &&\
+nvim -c "PackerSync"
 ```
 
 Jetbrains Mono Nerd Font
@@ -95,113 +66,25 @@ Jetbrains Mono Nerd Font
 yay -S nerd-fonts-jetbrains-mono-160
 ```
 
-Install Node
+Install Node and Tools
 
 ```bash
-yay -S nodejs
-```
-
-Install npm
-
-```bash
-yay -S npm 
-```
-
-Install nvm
-
-```bash
-yay -S nvm 
-```
-
-Set default node to system
-
-```bash
-nvm alias default system
-```
-
-Install Typescript LSP
-
-```bash
-sudo npm install -g typescript typescript-language-server
-```
-
-Instal Other LSPs
-
-```bash
-sudo npm install -g yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
-```
-
-Install prettier
-
-```bash
+yay -S nodejs npm nvm &&\
+sudo npm install -g typescript typescript-language-server yaml-language-server bash-language-server vscode-langservers-extracted &&\
 sudo npm install -g prettier
 ```
 
-Install rustup
+Install Rust and LSP
 
 ```bash
-yay -S rustup
-```
-
-Install default toolchain
-
-```bash
+yay -S rustup rust-analyzer &&\
 rustup toolchain install stable
 ```
 
-Install rust analyzer
+Install Lua and LSP
 
 ```bash
-yay -S rust-analyzer
-```
-
-Install Lua
-
-```bash
-yay -S lua
-```
-
-Install Lua Server
-
-```bash
-yay -S lua-language-server
-```
-
-Install Lua Rocks
-
-```bash
-yay -S luarocks
-```
-
-Install Lua Formatter
-
-```bash
-yay -S stylua
-```
-
-Install Neovim
-
-```bash
-yay -S neovim
-```
-
-Install Neovim Packer
-
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-Clone neovim config
-
-```bash
-gh repo clone hrozan/nvim $HOME/.config/nvim
-```
-
-Install plugins
-
-```bash
-nvim -c "PackerSync"
+yay -S lua lua-language-server luarocks stylua
 ```
 
 Install Jetbrains ToolBox
@@ -213,19 +96,9 @@ yay -S jetbrains-toolbox
 Install `docker`
 
 ```bash
-sudo pamac install docker
-```
-
-Start service
-
-```bash
+sudo pamac install docker &&\
 sudo systemctl enable docker.service &&\
-sudo systemctl start docker.service
-```
-
-Add user to root group
-
-```bash
+sudo systemctl start docker.service &&\
 sudo gpasswd -a $USER docker
 ```
 
