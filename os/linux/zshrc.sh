@@ -19,9 +19,7 @@ plugins=(
 
 eval "$(starship init zsh)"
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
 source $ZSH/oh-my-zsh.sh
-
 source /usr/share/nvm/init-nvm.sh
 
 alias g=git
@@ -29,7 +27,7 @@ alias n=npm
 alias c=clear
 alias vi=nvim
 alias http=curlie
-alias vim="neovide.exe --wsl"
+alias vim=neovide
 alias l='exa --long --header --git --icons'
 alias la='exa --long --header --git --icons --all'
 alias dc='docker-compose'

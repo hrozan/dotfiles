@@ -1,12 +1,9 @@
-# Higor Rozan tutorial to setup Linux and Windows 
-
-
 ## Linux
 
 Install git
 
 ```bash
-sudo pacman -S --needed git base-devel git-delta github-cli
+sudo pacman -S --needed git base-devel 
 ```
 
 Install yay
@@ -15,10 +12,10 @@ Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 
-Install 1password
+Install tools
 
 ```bash
-yay -S git-delta github-cli 1password 
+yay -S kitty zsh zsh-completions starship fzf exa bat curlie z git-delta github-cli 1password chrome-gnome-shell 
 ```
 
 Login Github
@@ -33,19 +30,12 @@ Clone dotfiles
 gh repo clone dotfiles $HOME/.config/dotfiles
 ```
 
-Install terminal tools
-
-```bash
-sudo pamac install kitty zsh zsh-completions starship fzf exa bat curlie z
-```
-
-Install Oh My ZSH and plugins
+Install oh-my-zsh and plugins
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&\
 git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin &&\
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 ```
 
 Install neovim
@@ -58,13 +48,13 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 nvim -c "PackerSync"
 ```
 
-Jetbrains Mono Nerd Font
+Install Jetbrains tools
 
 ```bash
-yay -S nerd-fonts-jetbrains-mono-160
+yay -S jetbrains-toolbox nerd-fonts-jetbrains-mono-160
 ```
 
-Install Node and Tools
+Install node and tools
 
 ```bash
 yay -S nodejs npm nvm &&\
@@ -72,56 +62,41 @@ sudo npm install -g typescript typescript-language-server yaml-language-server b
 sudo npm install -g prettier
 ```
 
-Install Rust and LSP
+Install rust and tools
 
 ```bash
 yay -S rustup rust-analyzer &&\
 rustup toolchain install stable
 ```
 
-Install Lua and LSP
+Install Lua and tools
 
 ```bash
 yay -S lua lua-language-server luarocks stylua
 ```
 
-Install Jetbrains ToolBox
+Install docker and tools
 
 ```bash
-yay -S jetbrains-toolbox
+yay -S docker docker-compose
 ```
 
-Install `docker`
-
 ```bash
-sudo pamac install docker &&\
 sudo systemctl enable docker.service &&\
+```
+
+```bash
 sudo systemctl start docker.service &&\
+```
+
+```bash
 sudo gpasswd -a $USER docker
-```
-
-Docker Compose
-
-```bash
-yay -S docker-compose
-```
-
-Install gnome browser extention
-
-```bash
-yay -S chrome-gnome-shell
 ```
 
 Install Spotify
 
 ```bash
 flatpak install flathub com.spotify.Client
-```
-
-Install Discord
-
-```bash
-flatpak install flathub com.discordapp.Discord
 ```
 
 ## Windows
@@ -174,18 +149,6 @@ Install gpg4win (Admin Required)
 scoop install gpg4win
 ```
 
-Install touch
-
-```pwsh
-scoop install touch
-```
-
-Install delta
-
-```pwsh
-scoop install delta
-```
-
 Install bat
 
 ```pwsh
@@ -234,22 +197,10 @@ Install node
 winget install nodejs
 ```
 
-Install nvm
-
-```pwsh
-winget install CoreyButler.NVMforWindows
-```
-
 Install Typescript LSP
 
 ```pwsh
-sudo npm install -g typescript typescript-language-server
-```
-
-Instal Other LSPs
-
-```pwsh
-sudo npm install -g yaml-language-server vscode-langservers-extracted dockerfile-language-server-nodejs bash-language-server emmet-ls
+npm install -g typescript typescript-language-server
 ```
 
 Install rustup
