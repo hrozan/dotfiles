@@ -245,12 +245,3 @@ Install plugins
 nvim -c "PackerSync"
 ```
 
-Install toolbox
-
-```pwsh
-winget install JetBrains.Toolbox
-```
-
-Install Windowns Subsystem for Linux - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
-
-Install [Docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module)
