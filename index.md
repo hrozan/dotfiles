@@ -1,4 +1,5 @@
-# hrozan
+# Higor Rozan tutorial to setup Linux and Windows 
+
 
 ## Linux
 
@@ -35,67 +36,34 @@ gh auth login
 Clone dotfiles
 
 ```bash
-gh repo clone hrozan/dotfiles $HOME/.config/dotfiles
+gh repo clone dotfiles $HOME/.config/dotfiles
 ```
 
-Install gnome browser extention
+Install neovim
 
 ```bash
-yay -S chrome-gnome-shell
+yay -S neovim neovide
 ```
 
-Install Kitty
+Clone nvim
 
 ```bash
-sudo pamac install kitty
+gh repo clone nvim $HOME/.config/nvim
 ```
 
-Install starship
+Install terminal tools
 
 ```bash
-yay -S starship
+sudo pamac install kitty zsh zsh-completions starship fzf exa bat curlie 
 ```
 
-Install fzf
+Install Oh My ZSH ana plugins
 
 ```bash
-yay -S fzf
-```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&\
+git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin &&\
 
-Install exa
 
-```bash
-yay -S exa
-```
-
-Install bat
-
-```bash
-yay -S bat
-```
-
-Install curlie
-
-```bash
-yay -S curlie
-```
-
-Install zsh
-
-```bash
-yay -S zsh
-```
-
-Install zsh completion
-
-```bash
-yay -S zsh-completions
-```
-
-Install Oh My ZSH
-
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Install Zsh Syntax Highlighting
@@ -107,7 +75,6 @@ yay -S zsh-syntax-highlighting
 Install Zsh FZF Plugin
 
 ```bash
-git clone https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin
 ```
 
 Install git diff tool
@@ -266,6 +233,12 @@ Docker Compose
 
 ```bash
 yay -S docker-compose
+```
+
+Install gnome browser extention
+
+```bash
+yay -S chrome-gnome-shell
 ```
 
 Install Spotify
