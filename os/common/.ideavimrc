@@ -7,7 +7,6 @@ set NERDTree
 set number relativenumber
 set nu rnl
 set clipboard+=unnamed
-set clipboard+=ideaput
 
 " Mappings
 nmap gi :action GotoImplementation<cr>
