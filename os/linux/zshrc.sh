@@ -1,6 +1,6 @@
 # Author: Higor Rozan
 
-PATH=$HOME/.local/bin:$HOME/Android/Sdk/emulator/:$PATH
+PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 EDITOR=nvim
 ZSH=$HOME/.oh-my-zsh/
 plugins=(
