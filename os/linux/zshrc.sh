@@ -34,8 +34,3 @@ alias l='exa --long --header --git --icons'
 alias la='exa --long --header --git --icons --all'
 alias dc='docker-compose'
 
-function reset-vi-plugins {
-    rm -rf ./plugins
-    vi -c "PackerSync"
-}
-

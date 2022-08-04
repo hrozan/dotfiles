@@ -13,6 +13,7 @@
   s = status
   c = commit
   a = add .
+  rs = restore --staged
   mt = mergetool
   cb = checkout -b 
   cm = checkout main 
