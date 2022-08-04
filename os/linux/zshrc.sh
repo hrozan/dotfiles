@@ -27,6 +27,7 @@ alias n=npm
 alias y=yarn
 alias c=clear
 alias vi=nvim
+alias gs='g s'
 alias http=curlie
 alias vim=neovide
 alias cat='bat -p --theme=OneHalfDark'
