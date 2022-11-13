@@ -14,7 +14,7 @@ plugins=(
   docker
   docker-compose
   github
-  rust
+  dotnet
 )
 
 eval "$(starship init zsh)"
@@ -24,14 +24,12 @@ source /usr/share/nvm/init-nvm.sh
 
 alias g=git
 alias n=npm
-alias y=yarn
+alias d=dotnet
 alias c=clear
 alias vi=nvim
 alias gs='g s'
 alias http=curlie
-alias vim=neovide
 alias cat='bat -p --theme=OneHalfDark'
 alias l='exa --long --header --git --icons'
 alias la='exa --long --header --git --icons --all'
-alias dc='docker-compose'
 
