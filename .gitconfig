@@ -10,7 +10,8 @@
   defaultBranch = main
 
 [alias]
-  s = status
+  s = !lazygit
+  st = status
   c = commit
   a = add .
   rs = restore --staged
