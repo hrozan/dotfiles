@@ -1,10 +1,29 @@
 # Author: Higor Rozan
 
-PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 EDITOR=nvim
+
+# Alias
+alias g=git
+alias n=npm
+alias vi=nvim
+alias gs='g s'
+alias cat='batcat'
+alias l='exa --long --header --icons'
+alias la='exa --long --header --icons --all'
+alias lg=lazygit
+alias lad=lazydocker
+
+export PATH=$PATH:$HOME/.local/bin/
+
+# Starship
+eval "$(starship init zsh)"
+
+# Oh-my-zsh
 ZSH=$HOME/.oh-my-zsh/
 plugins=(
+  1password
 	git
+  zsh-z
 	gh
 	fzf-zsh-plugin
 	zsh-syntax-highlighting
@@ -14,24 +33,12 @@ plugins=(
 	docker
 	docker-compose
 	github
-	dotnet
-	rust
+	golang
+  gcloud
+  aws
 )
-
-eval "$(starship init zsh)"
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 source $ZSH/oh-my-zsh.sh
-source /usr/share/nvm/init-nvm.sh
 
-alias g=git
-alias n=npm
-alias d=dotnet
-alias c=clear
-alias vi=nvim
-alias vim=neovide
-alias gs='g s'
-alias http=curlie
-alias cat='bat -p --theme=OneHalfDark'
-alias l='exa --long --header --git --icons'
-alias la='exa --long --header --git --icons --all'
-alias lg=lazygit
+# Fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
