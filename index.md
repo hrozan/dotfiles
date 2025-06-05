@@ -60,13 +60,7 @@ yay -S docker docker-compose
 ```
 
 ```bash
-sudo systemctl enable docker.service &&\
-```
-
-```bash
-sudo systemctl start docker.service &&\
-```
-
-```bash
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
 sudo gpasswd -a $USER docker
 ```
